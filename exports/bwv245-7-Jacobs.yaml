@@ -1,20 +1,20 @@
 audio_analysis:
-  total_peaks: 74
+  total_peaks: 87
   duration_seconds: 57.088
   duration_ticks: 57088
   ticks_per_second: 1000
   detection_method: energy
-  sensitivity: 1.0
+  sensitivity: 0.25
 peaks:
 - index: 0
   tick: 1393
   time_seconds: 1.393
 - index: 1
-  tick: 2043
-  time_seconds: 2.043
+  tick: 1904
+  time_seconds: 1.904
 - index: 2
-  tick: 2530
-  time_seconds: 2.53
+  tick: 2414
+  time_seconds: 2.414
 - index: 3
   tick: 3018
   time_seconds: 3.018
@@ -28,206 +28,245 @@ peaks:
   tick: 5085
   time_seconds: 5.085
 - index: 7
-  tick: 6780
-  time_seconds: 6.78
+  tick: 5781
+  time_seconds: 5.781
 - index: 8
-  tick: 7267
-  time_seconds: 7.267
+  tick: 6478
+  time_seconds: 6.478
 - index: 9
-  tick: 7825
-  time_seconds: 7.825
+  tick: 7058
+  time_seconds: 7.058
 - index: 10
-  tick: 8591
-  time_seconds: 8.591
+  tick: 7685
+  time_seconds: 7.685
 - index: 11
+  tick: 8219
+  time_seconds: 8.219
+- index: 12
+  tick: 8730
+  time_seconds: 8.73
+- index: 13
   tick: 9311
   time_seconds: 9.311
-- index: 12
+- index: 14
   tick: 9822
   time_seconds: 9.822
-- index: 13
+- index: 15
   tick: 10356
   time_seconds: 10.356
-- index: 14
+- index: 16
   tick: 10843
   time_seconds: 10.843
-- index: 15
+- index: 17
   tick: 11377
   time_seconds: 11.377
-- index: 16
+- index: 18
   tick: 11888
   time_seconds: 11.888
-- index: 17
-  tick: 12608
-  time_seconds: 12.608
-- index: 18
-  tick: 13467
-  time_seconds: 13.467
 - index: 19
-  tick: 14210
-  time_seconds: 14.21
+  tick: 12469
+  time_seconds: 12.469
 - index: 20
+  tick: 13212
+  time_seconds: 13.212
+- index: 21
+  tick: 13885
+  time_seconds: 13.885
+- index: 22
+  tick: 14442
+  time_seconds: 14.442
+- index: 23
+  tick: 14953
+  time_seconds: 14.953
+- index: 24
   tick: 16068
   time_seconds: 16.068
-- index: 21
+- index: 25
   tick: 16648
   time_seconds: 16.648
-- index: 22
+- index: 26
   tick: 17182
   time_seconds: 17.182
-- index: 23
+- index: 27
   tick: 17879
   time_seconds: 17.879
-- index: 24
+- index: 28
   tick: 18366
   time_seconds: 18.366
-- index: 25
+- index: 29
   tick: 18877
   time_seconds: 18.877
-- index: 26
+- index: 30
   tick: 19527
   time_seconds: 19.527
-- index: 27
+- index: 31
   tick: 20015
   time_seconds: 20.015
-- index: 28
+- index: 32
   tick: 20572
   time_seconds: 20.572
-- index: 29
-  tick: 21315
-  time_seconds: 21.315
-- index: 30
-  tick: 22221
-  time_seconds: 22.221
-- index: 31
-  tick: 22778
-  time_seconds: 22.778
-- index: 32
+- index: 33
+  tick: 21106
+  time_seconds: 21.106
+- index: 34
+  tick: 21757
+  time_seconds: 21.757
+- index: 35
+  tick: 22337
+  time_seconds: 22.337
+- index: 36
+  tick: 22941
+  time_seconds: 22.941
+- index: 37
   tick: 23428
   time_seconds: 23.428
-- index: 33
+- index: 38
   tick: 24032
   time_seconds: 24.032
-- index: 34
+- index: 39
   tick: 24613
   time_seconds: 24.613
-- index: 35
+- index: 40
   tick: 25147
   time_seconds: 25.147
-- index: 36
+- index: 41
   tick: 25727
   time_seconds: 25.727
-- index: 37
+- index: 42
   tick: 26215
   time_seconds: 26.215
-- index: 38
+- index: 43
   tick: 26726
   time_seconds: 26.726
-- index: 39
+- index: 44
   tick: 27306
   time_seconds: 27.306
-- index: 40
+- index: 45
   tick: 27794
   time_seconds: 27.794
-- index: 41
+- index: 46
+  tick: 28606
+  time_seconds: 28.606
+- index: 47
   tick: 30046
   time_seconds: 30.046
-- index: 42
+- index: 48
   tick: 30557
   time_seconds: 30.557
-- index: 43
+- index: 49
   tick: 31114
   time_seconds: 31.114
-- index: 44
+- index: 50
   tick: 31857
   time_seconds: 31.857
-- index: 45
+- index: 51
   tick: 32809
   time_seconds: 32.809
-- index: 46
+- index: 52
   tick: 33668
   time_seconds: 33.668
-- index: 47
-  tick: 34528
-  time_seconds: 34.528
-- index: 48
-  tick: 35015
-  time_seconds: 35.015
-- index: 49
-  tick: 35735
-  time_seconds: 35.735
-- index: 50
-  tick: 36269
-  time_seconds: 36.269
-- index: 51
-  tick: 36757
-  time_seconds: 36.757
-- index: 52
+- index: 53
+  tick: 34226
+  time_seconds: 34.226
+- index: 54
+  tick: 34737
+  time_seconds: 34.737
+- index: 55
+  tick: 35410
+  time_seconds: 35.41
+- index: 56
+  tick: 35944
+  time_seconds: 35.944
+- index: 57
+  tick: 36548
+  time_seconds: 36.548
+- index: 58
   tick: 37268
   time_seconds: 37.268
-- index: 53
+- index: 59
   tick: 37871
   time_seconds: 37.871
-- index: 54
+- index: 60
   tick: 38429
   time_seconds: 38.429
-- index: 55
+- index: 61
   tick: 39079
   time_seconds: 39.079
-- index: 56
+- index: 62
   tick: 39636
   time_seconds: 39.636
-- index: 57
+- index: 63
   tick: 40309
   time_seconds: 40.309
-- index: 58
+- index: 64
   tick: 41052
   time_seconds: 41.052
-- index: 59
+- index: 65
+  tick: 41935
+  time_seconds: 41.935
+- index: 66
   tick: 43839
   time_seconds: 43.839
-- index: 60
+- index: 67
   tick: 44326
   time_seconds: 44.326
-- index: 61
+- index: 68
   tick: 44884
   time_seconds: 44.884
-- index: 62
+- index: 69
   tick: 45371
   time_seconds: 45.371
-- index: 63
+- index: 70
   tick: 45859
   time_seconds: 45.859
-- index: 64
+- index: 71
   tick: 46393
   time_seconds: 46.393
-- index: 65
+- index: 72
   tick: 47020
   time_seconds: 47.02
-- index: 66
+- index: 73
   tick: 47647
   time_seconds: 47.647
-- index: 67
+- index: 74
   tick: 48227
   time_seconds: 48.227
-- index: 68
+- index: 75
   tick: 48761
   time_seconds: 48.761
-- index: 69
+- index: 76
   tick: 49249
   time_seconds: 49.249
-- index: 70
+- index: 77
   tick: 49899
   time_seconds: 49.899
-- index: 71
+- index: 78
   tick: 50689
   time_seconds: 50.689
-- index: 72
-  tick: 52221
-  time_seconds: 52.221
-- index: 73
+- index: 79
+  tick: 51339
+  time_seconds: 51.339
+- index: 80
+  tick: 51919
+  time_seconds: 51.919
+- index: 81
+  tick: 52616
+  time_seconds: 52.616
+- index: 82
+  tick: 53104
+  time_seconds: 53.104
+- index: 83
+  tick: 53893
+  time_seconds: 53.893
+- index: 84
   tick: 54752
   time_seconds: 54.752
+- index: 85
+  tick: 55356
+  time_seconds: 55.356
+- index: 86
+  tick: 55936
+  time_seconds: 55.936
 end_of_file:
   tick: 57088
   time_seconds: 57.088

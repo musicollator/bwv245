@@ -7,7 +7,7 @@ workInfo:
   externalURL: "https://en.wikipedia.org/wiki/St_John_Passion"
 
 files:
-  audioPath: "bwv245-7-Jacobs.wav"
+  audioPath: "bwv245-7-Jacobs.mp3"
   
 musicalStructure:
   totalDurationSeconds: 55.0
