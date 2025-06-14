@@ -12,3 +12,4 @@ __pycache__/
 /*.pdf
 /*.svg
 svgo_incremental_*/
+segments/
