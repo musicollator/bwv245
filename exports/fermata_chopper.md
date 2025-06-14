@@ -2,13 +2,21 @@ Here's the updated script with both detection methods! It will automatically cho
 
 ## Option 2: Simple Energy Method (what you wanted)
 ```bash
-# Find regions below 10th percentile energy
+# Find regions below 10th percentile energy, clean output directory first
 python fermata_chopper.py -i chorale.wav \
   --energy-percentile 10 \
   --stability-percentile 90 \
   --min-duration 0.1 \
-  --plot \
-  -o segments
+  -o segments \
+  --plot
+
+# Preserve original sample rate (avoid chipmunk effect)
+python fermata_chopper.py -i chorale.wav \
+  --energy-percentile 10 \
+  --stability-percentile 90 \
+  --min-duration 0.1 \
+  -o segments \
+  --preserve-sr
 ```
 
 ## More examples for the simple energy method:
@@ -19,17 +27,17 @@ python fermata_chopper.py -i chorale.wav \
   --stability-percentile 95 \
   --min-duration 0.05 \
   --min-gap 1.0 \
-  --plot \
-  -o segments
+  -o segments \
+  --preserve-sr
 
-# Medium sensitivity
+# Don't clean output directory (keep existing files)
 python fermata_chopper.py -i chorale.wav \
   --energy-percentile 15 \
   --stability-percentile 80 \
   --min-duration 0.2 \
-  --plot \
-  -o segments
-
+  -o segments \
+  --no-clean \
+  --preserve-sr
 ```
 
 ## Key Parameters for Simple Energy Method:
@@ -39,8 +47,17 @@ python fermata_chopper.py -i chorale.wav \
 - `--stability-percentile`: Higher = ignores harmony requirements (try 80-95 to focus only on energy)
 - `--min-duration`: Minimum time for a low energy region (try 0.05-0.5 seconds)
 
+**For output management:**
+- `-o segments`: Save to specific directory (automatically cleaned before saving)
+- `--no-clean`: Keep existing files in output directory (don't clean first)
+- `--preserve-sr`: Load and save at original sample rate (prevents chipmunk/accelerated playback)
+
 **The script automatically chooses:**
 - **Simple Energy Method** when you specify `--energy-percentile` 
 - **Energy Drop Method** when you specify `--drop-threshold`
 
-Try the first example - it should catch those obvious energy valleys at 5s, 12s, 29s, 42s, and 57s!#!/usr/bin/env python3
+**IMPORTANT:** Use `--preserve-sr` to avoid the "chipmunk effect" - by default librosa resamples to 22050 Hz which can cause accelerated playback if your original file was at a different sample rate.
+
+The script will automatically clean the output directory before saving new segments to avoid leftover files from previous runs. Use `--no-clean` if you want to preserve existing files.
+
+Try the first example - it should catch those obvious energy valleys and create clean segments at the correct playback speed!#!/usr/bin/env python3

@@ -1,4 +1,3 @@
-
 """
 Automated Fermata Detection and Audio Chopping
 Detects fermatas using energy drop analysis - finds significant drops in RMS energy
@@ -7,6 +6,7 @@ followed by sustained low energy periods, which typically indicate fermata endin
 
 import argparse
 import os
+import shutil
 import numpy as np
 import librosa
 import soundfile as sf
@@ -637,7 +637,7 @@ def plot_analysis(y, sr, debug_info, fermata_times, output_path=None):
     return segments
 
 
-def save_segments(segments, input_path, output_dir=None):
+def save_segments(segments, input_path, sr, output_dir=None, clean_output_dir=True):
     """
     Save audio segments to files
     
@@ -647,16 +647,28 @@ def save_segments(segments, input_path, output_dir=None):
         List of audio segments
     input_path : str or Path
         Original input file path
+    sr : int
+        Sample rate used by librosa
     output_dir : str or Path, optional
         Output directory (default: same as input)
+    clean_output_dir : bool
+        Whether to clean the output directory before saving
     """
     
     input_path = Path(input_path)
     if output_dir is None:
         output_dir = input_path.parent
+        clean_output_dir = False  # Don't clean parent directory
     else:
         output_dir = Path(output_dir)
-        output_dir.mkdir(exist_ok=True)
+    
+    # Clean output directory if requested and it exists
+    if clean_output_dir and output_dir.exists():
+        print(f"Cleaning output directory: {output_dir}")
+        shutil.rmtree(output_dir)
+    
+    # Create output directory
+    output_dir.mkdir(exist_ok=True, parents=True)
     
     base_name = input_path.stem
     extension = input_path.suffix
@@ -667,8 +679,8 @@ def save_segments(segments, input_path, output_dir=None):
         output_filename = f"{base_name}-{segment['segment_index']}{extension}"
         output_path = output_dir / output_filename
         
-        # Use soundfile to preserve quality
-        sf.write(output_path, segment['audio'], samplerate=librosa.get_samplerate(str(input_path)))
+        # Use the sample rate from librosa.load(), not from the original file
+        sf.write(output_path, segment['audio'], samplerate=sr)
         
         saved_files.append(output_path)
         print(f"Saved: {output_filename}")
@@ -722,6 +734,10 @@ def main():
                        help='Show analysis plot')
     parser.add_argument('--save-plot', 
                        help='Save plot to specified file (e.g., analysis.png)')
+    parser.add_argument('--no-clean', action='store_true',
+                       help='Do not clean output directory before saving segments')
+    parser.add_argument('--preserve-sr', action='store_true',
+                       help='Load and save at original sample rate (no resampling)')
     
     args = parser.parse_args()
     
@@ -737,7 +753,10 @@ def main():
     try:
         # Load audio
         print("Loading audio...")
-        y, sr = librosa.load(str(input_path))
+        if args.preserve_sr:
+            y, sr = librosa.load(str(input_path), sr=None)  # Preserve original sample rate
+        else:
+            y, sr = librosa.load(str(input_path))  # Default to 22050 Hz
         duration = librosa.get_duration(y=y, sr=sr)
         print(f"Audio loaded: {duration:.2f}s, sample rate: {sr}Hz")
         print()
@@ -791,7 +810,8 @@ def main():
         
         # Save segments
         print("Saving segments...")
-        saved_files = save_segments(segments, input_path, args.output_dir)
+        clean_output = not args.no_clean
+        saved_files = save_segments(segments, input_path, sr, args.output_dir, clean_output_dir=clean_output)
         print()
         print(f"Successfully saved {len(saved_files)} segments")
         
