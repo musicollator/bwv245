@@ -13,7 +13,6 @@ files:
 musicalStructure:
   totalDurationSeconds: 57.088
   totalMeasures: 11
-  silenceAtStart: 1.42  # seconds of silence to skip in web player
   lastMeasureDuration: 3/4
   visualLeadTimeSeconds: 0.5
 
