@@ -7,6 +7,7 @@ workInfo:
   externalURL: "https://en.wikipedia.org/wiki/St_John_Passion"
 
 files:
+  syncPath: "bwv245_audio_sync_final.yaml"
   audioPath: "bwv245.mp3"
   
 musicalStructure:
