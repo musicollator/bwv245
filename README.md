@@ -10,7 +10,7 @@ python ../bwv-zeug/audio/fermata_chopper.py \
   --plot
 
 python ../bwv-zeug/audio/add_clicks.py segments/ --clean
-python ../bwv-zeug/python/sync_with_audio.py bwv245_note_heads.csv exports/bwv245.yaml detected_beats.yaml -o exports/bwv245_audio_sync_final.yaml
+python ../bwv-zeug/python/sync_with_audio.py bwv245_note_heads.csv exports/bwv245.yaml detected_beats.yaml  -c exports/bwv245.config.yaml -o exports/bwv245_audio_sync_final.yaml
 python ../bwv-zeug/audio/visualize_beats.py --audio-dir segments --beats-yaml detected_beats.yaml --yaml-timing exports/bwv245_audio_sync_final.yaml
 conda deactivate
 ```
