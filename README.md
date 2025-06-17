@@ -1,6 +1,7 @@
 
 ```
 conda activate unified-env    
+b clean all
 python ../bwv-zeug/audio/fermata_chopper.py \
   -i exports/bwv245.wav \
   --energy-percentile 10 \
