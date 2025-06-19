@@ -15,27 +15,27 @@ sopranoMusic = {
   {
     \partial 4
     g'4
-    | % 2
+    | % 1
     g' g' fis' \fermata d'
-    | % 3
+    | % 2
     g' a' bes' bes'
+    | % 3
+    c'' ( bes' ) a' \fermata a'
     | % 4
-    c'' bes' a' \fermata a'
+    bes' c'' d''8 ( c'' bes'4 )
     | % 5
-    bes' c'' d''8 c'' bes'4
+    ees'' ees'' d'' des''8 ( c'' )
     | % 6
-    ees'' ees'' d'' des''8 c''
-    | % 7
     c''2 bes'4 \fermata bes'
+    | % 7
+    a' g' f' d'8 ( ees' )
     | % 8
-    a' g' f' d'8 ees'
-    | % 9
     f'4 f' g' f'
-    | % 10
+    | % 9
     ees'2 d'4 \fermata d''
+    | % 10
+    c'' bes'8 ( a' ) a'2
     | % 11
-    c'' bes'8 a' a'2
-    | % 12
     g'2. \fermata \bar "|."
   }
 }
@@ -60,27 +60,27 @@ altoMusic = {
   {
     \partial 4
     d'4
+    | % 1
+    ees'8 ( d' ) c'4 d' a
     | % 2
-    ees'8 d' c'4 d' a
+    d'8 ( e' ) fis'4 g' g'
     | % 3
-    d'8 e' fis'4 g' g'
+    a' ( g' ) fis' fis'
     | % 4
-    a' g' fis' fis'
-    | % 5
     g' a' bes' f'
+    | % 5
+    g'8 ( a' bes'4 ) bes' bes'
     | % 6
-    g'8 a' bes'4 bes' bes'
+    bes' ( a' ) f' g'8 ( f' )
     | % 7
-    bes' a' f' g'8 f'
+    ees' ( d' ) e'4 d' a
     | % 8
-    ees' d' e'4 d' a
+    d'8 ( ees' ) f'4 f'8 ( ees' ) ees' ( d' )
     | % 9
-    d'8 ees' f'4 f'8 ees' ees' d'
+    d' ( c'16 bes c'4 ) bes bes'
     | % 10
-    d' c'16 bes c'4 bes bes'
+    a' g' g' ( fis' )
     | % 11
-    a' g' g' fis'
-    | % 12
     d'2.
   }
 }
@@ -91,27 +91,27 @@ tenorMusic = {
   {
     \partial 4
     bes4
+    | % 1
+    bes a8 ( g ) a4 fis
     | % 2
-    bes a8 g a4 fis
-    | % 3
     g c' d' d'
+    | % 3
+    ees' ( d' ) d' d'
     | % 4
-    ees' d' d' d'
-    | % 5
     d' ees' f'8 ees' d' c'
-    | % 6
+    | % 5
     bes4 bes8 c' d' bes g'4
-    | % 7
+    | % 6
     f'4. ees'8 d'4 d'
-    | % 8
+    | % 7
     c' bes a f
-    | % 9
+    | % 8
     bes bes bes a
+    | % 9
+    bes ( f ) f f'
     | % 10
-    bes f f f'
+    ees' d' e' ( d'8 c' )
     | % 11
-    ees' d' e' d'8 c'
-    | % 12
     b2.
   }
 }
@@ -122,27 +122,27 @@ bassMusic = {
   {
     \partial 4
     g4
+    | % 1
+    c8 ( d ) ees4 d c
     | % 2
-    c8 d ees4 d c
-    | % 3
     bes, a, g, g
+    | % 3
+    fis ( g ) d d
     | % 4
-    fis g d d
-    | % 5
     g c' bes aes
-    | % 6
+    | % 5
     g fis f e
-    | % 7
+    | % 6
     f2 bes,4 g,
+    | % 7
+    c cis d d8 ( c )
     | % 8
-    c cis d d8 c
+    bes, ( c ) d ( bes, ) ees4 f
     | % 9
-    bes, c d bes, ees4 f
+    g ( a ) bes bes
     | % 10
-    g a bes bes
+    fis g cis ( d )
     | % 11
-    fis g cis d
-    | % 12
     g,2.
   }
 }
