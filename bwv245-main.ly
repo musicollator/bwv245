@@ -40,18 +40,18 @@ sopranoMusic = {
   }
 }
 
-sopranoLyrics = \lyricmode {
+bassLyrics = \lyricmode {
   O
   gro -- ße Lieb, o
   Lieb' ohn al -- le
-  Ma -- a -- ße, die
-  dich ge -- bra -- cht -- auf
-  die -- se Mar -- te -- r stra -- ße, ich
-  leb -- te mit de -- r
+  Ma -- ße, die
+  dich ge -- bracht -- auf
+  die -- se Mar -- ter stra -- ße, ich
+  leb -- te mit der
   Welt in Lust und
   Freu -- den, und
-  du muß -- t -- lei --
-  den.
+  du mußt -- lei -- den.
+
 }
 
 % Alto
@@ -192,6 +192,6 @@ bwv =
     }
   }
 
-  \new Lyrics \lyricsto "soprano" \sopranoLyrics
+  \new Lyrics \lyricsto "bass" \bassLyrics
 >>
 
