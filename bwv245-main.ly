@@ -6,7 +6,7 @@
 global = {
   \key g \minor
   \time 4/4
-  \tempo 4 = 70
+  %% \tempo 4 = 70
 }
 
 % Soprano
